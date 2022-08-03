@@ -8,6 +8,6 @@ App.onJoinPlayer.Add(function(player){
     let nth = Math.floor(Math.random() * mbti.length);
 
     player.moveSpeed = 300; // 플레이어의 속도를 300으로 올리고
-    player.title = mbti[nth];
+    player.title = mbti[nth]; // 플레이어에게 title을 부여함.
     player.sendUpdated(); // 이 내용을 업데이트.
 })
