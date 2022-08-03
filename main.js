@@ -1,4 +1,4 @@
-// zep 앱은 main.js 압축파일만 반영됨.
+// !! zep 앱은 main.js 압축파일만 반영됨.
 
 /* 캐릭터 이미지 바꾸기
 App.loadSpritesheet(fileName: string, frameWidth: integer, frameHeight: integer, anims: array, frameRate: integer): ScriptDynamicResource
@@ -22,7 +22,9 @@ App.onJoinPlayer.Add(function(player){
 
     player.sprite = cimg; // sprite 시트 를 cimg 변수 이미지로 교체.
 
+
     player.moveSpeed = 300; // 플레이어의 속도를 300으로 올리고
     player.title = mbti[nth]; // 플레이어에게 title을 부여함.
-    player.sendUpdated(); // 이 내용을 업데이트.
+
+    player.sendUpdated(); // 이 내용들을 업데이트.
 })
