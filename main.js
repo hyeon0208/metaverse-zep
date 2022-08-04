@@ -28,3 +28,8 @@ App.onJoinPlayer.Add(function(player){
 
     player.sendUpdated(); // 이 내용들을 업데이트.
 })
+
+// 플레이어 채팅 말풍선 활성화.
+App.onSay.Add(function(player, text) {
+    App.showCenterLabel(text);
+})
