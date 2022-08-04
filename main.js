@@ -33,3 +33,9 @@ App.onJoinPlayer.Add(function(player){
 App.onSay.Add(function(player, text) {
     App.showCenterLabel(text);
 })
+
+// 채팅 칠시 공지 활성화
+App.onSay.Add(function(player, text) {
+    let message = player.name + "님이" + text + "라고 말했습니다.";
+    App.showCenterLabel(text);
+})
