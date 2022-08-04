@@ -45,8 +45,7 @@ App.onSay.Add(function(player, text) {
         player.moveSpeed = 30;
     }
 
-    player.sendUpdate();
-
+    player.sendUpdated();
 
     let message = player.name + "님이 " + text + "라고 말했습니다.";
     App.showCenterLabel(message);
