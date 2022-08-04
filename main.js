@@ -53,12 +53,14 @@ App.onSay.Add(function(player, text) {
 
 // ------- 맵 조작 ----------
 
-// 플레
+// 구름 오브젝트 추가 및 오브젝트 이동.
 
 let cloud = App.loadSpritesheet("cloud.png", 659, 400, [0], 6);
 
 App.onJoinPlayer.Add(function() {
-  Map.putObject(5, 5 cloud);  // 오브젝트 넣기 (  x 좌표, y좌표, 넣을 객체 )
+  Map.putObject(5, 5, cloud);  // 오브젝트 넣기 (  x 좌표, y좌표, 넣을 객체 )
   Map.moveObject(5, 5, 2, 2, 34); // 오브젝트 움직이기 
                         // ( x좌표, y좌표 오브젝트에 있는 오브젝트를, x좌표, y좌표로 ?초동안 움직여라 )
 });
+
+
