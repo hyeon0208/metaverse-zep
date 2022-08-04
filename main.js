@@ -1,8 +1,8 @@
 // // !! zep 앱은 main.js 압축파일만 반영됨.
 
-// /* 캐릭터 이미지 바꾸기
+// --------- 캐릭터 이미지 바꾸기 ------------
 // App.loadSpritesheet(fileName: string, frameWidth: integer, frameHeight: integer, anims: array, frameRate: integer): ScriptDynamicResource
-// */
+// 
 // let cimg = App.loadSprite('test.png', 64, 96, {
 //     left: [5, 6, 7, 8, 9], // 이미 정해진 왼쪽 방향으로 걸을 때의 애니메이션 이름
 //     up: [15, 16, 17, 18, 19], // 윗쪽 방향키를 입력할 떄 그 이름에 쓰일 전체 파일에서의 인덱스 넘버들
@@ -14,7 +14,7 @@
 
 // App.onJoinPlayer.Add(function(player){
 
-//     // MBTI 랜덤하게 추가.
+//     // --------  MBTI 랜덤하게 추가. ----------
 //     let mbti = ["ENFP", "ESTJ", "INFP", "ISTP"];
 
 //     // Math.random으로 4개의 mbti를 랜덤하게 출력, Math.floor 로 소수점 절삭. 
@@ -29,7 +29,7 @@
 //     player.sendUpdated(); // 이 내용들을 업데이트.
 // })
 
-// // 플레이어 채팅 말풍선 활성화.
+// //  -------- 플레이어 채팅 기능 구현. ----------------
 // App.onSay.Add(function(player, text) {
 //     App.showCenterLabel(text);
 // })
@@ -50,3 +50,15 @@ App.onSay.Add(function(player, text) {
     let message = player.name + "님이 " + text + "라고 말했습니다.";
     App.showCenterLabel(message);
 })
+
+// ------- 맵 조작 ----------
+
+// 플레
+
+let cloud = App.loadSpritesheet("cloud.png", 659, 400, [0], 6);
+
+App.onJoinPlayer.Add(function() {
+  Map.putObject(5, 5 cloud);  // 오브젝트 넣기 (  x 좌표, y좌표, 넣을 객체 )
+  Map.moveObject(5, 5, 2, 2, 34); // 오브젝트 움직이기 
+                        // ( x좌표, y좌표 오브젝트에 있는 오브젝트를, x좌표, y좌표로 ?초동안 움직여라 )
+});
